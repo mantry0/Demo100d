@@ -1,0 +1,60 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div *ngIf="user.age >= 18; else noPG13">
+
+
+  <div class="card">
+    <app-hello></app-hello>
+    <!-- <img src="img.jpg" alt="John" style="width:100%"> -->
+    <h1>{{ user.name }}</h1>
+    <p class="title">CEO & Founder, Example</p>
+    <p>Tuổi: {{ user.age }}</p>
+    <a href="#"><i class="fa fa-dribbble"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+    <p><button class="cl" (click)="showInfo()">Click me!</button></p>
+  </div>
+</div>
+<ng-template #noPG13>
+  <div class="card">
+    <h1>Bạn không thể xem nội dung này!!!</h1>
+  </div>
+</ng-template>
+<div class="card">
+<button class="cll" (click)="user.age=user.age -1">-</button>
+<button class="cll" (click)="user.age=user.age +1">+</button>
+</div>
+<br><br>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Đầu</th>
+      <th scope="col">Cuối</th>
+      <th scope="col">Chẵn</th>
+      <th scope="col">Lẻ</th>
+      <th scope="col">Họ tên</th>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let users of users; index as idx; count as total;first as first;last as last;even as even;odd as odd">
+
+      <th scope="row">{{idx}}/{{total}}</th>
+      <td>{{first}}</td>
+      <td>{{last}}</td>
+      <td>{{even}}</td>
+      <td>{{odd}}</td>
+      <td>{{users.name}}</td>
+      <td>{{users.username}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+<br><br>
+<!-- <div [class.tab-active]="isTabActive">
+  some content
+</div> -->
