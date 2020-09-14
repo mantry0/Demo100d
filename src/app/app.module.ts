@@ -6,16 +6,25 @@ import { HelloComponent } from './hello.component';
 import { HiComponent } from './hi/hi.component';
 import { CalComponent } from './cal/cal.component';
 import { Cal2Component } from './cal2/cal2.component';
-
-
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { Routes, RouterModule } from '@angular/router';
-const routes: Routes = [{
-  path:"cal2  ",component:Cal2Component
-}];
+import {FormsModule} from '@angular/forms';
+
+const routes: Routes = [
+  {
+  path: 'cal',
+  component: CalComponent
+  },
+  {
+    path: 'cal2',
+    component: Cal2Component
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: [ProgressBarComponent]
 })
 export class AppRoutingModule { }
 
@@ -27,9 +36,10 @@ export class AppRoutingModule { }
     CalComponent,
     Cal2Component,
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
