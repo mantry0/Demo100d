@@ -12,6 +12,10 @@ import {FormsModule} from '@angular/forms';
 
 const routes: Routes = [
   {
+    path: 'hi',
+    component: HiComponent
+  },
+  {
   path: 'cal',
   component: CalComponent
   },
@@ -22,25 +26,22 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  declarations: [ProgressBarComponent]
-})
-export class AppRoutingModule { }
-
-@NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     HiComponent,
     CalComponent,
     Cal2Component,
+    ProgressBarComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule,
+    RouterModule.forRoot(routes)
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RouterModule],
 })
 export class AppModule { }

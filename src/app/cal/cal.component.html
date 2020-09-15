@@ -1,12 +1,13 @@
 <div class="box">
-  <input type="number" placeholder="A:" class="mr-2" [(ngModel)]="a">
-  <select name="" id="" class="mr-2" (change)=Select($event)>
+  <input type="number" [(ngModel)]="a">
+  <select name="" id="" (change)=Select($event)>
     <option value="+">+</option>
     <option value="-">-</option>
     <option value="x">X</option>
     <option value="/">/</option>
   </select>
-  <input type="number" placeholder="B:" class="mr-2" [(ngModel)]="b">
+  <input type="number" [(ngModel)]="b">
   <button class="btn btn-success mr-2" (click)="Action()">=</button>
-  <input type="text" placeholder="KQ" class="mr-2" [value]="kq">
+  <input type="text" [value]="kq">
+
 </div>

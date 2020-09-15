@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
    templateUrl: './cal.component.html',
   styleUrls: ['./cal.component.css'],
 })
-export class CalComponent  {
+export class CalComponent implements OnInit{
   a: number;
   b: number;
   kq = 0;

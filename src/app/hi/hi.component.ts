@@ -246,6 +246,8 @@ export class HiComponent implements OnInit {
         }
       }
     ];
+  isDanger = false;
+  isWarning = false;
 
   ngOnInit(): void {
   }

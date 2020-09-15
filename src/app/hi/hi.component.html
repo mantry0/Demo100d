@@ -1,4 +1,4 @@
-
+<router-outlet></router-outlet>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div *ngIf="user.age >= 18; else noPG13">
 
@@ -58,3 +58,9 @@
 <!-- <div [class.tab-active]="isTabActive">
   some content
 </div> -->
+<button {click}="isDanger = !isDanger">Toggle Danger</button><br><br>
+<button {click}="isWarning = !isWarning">Toggle Warning</button>
+
+<div class="box" [class.red-border]="isDanger" [class.yellow-bg]="isWarning"></div>
+
+<div class="box red-border yellow-bg"></div>

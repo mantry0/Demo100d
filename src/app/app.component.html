@@ -1,9 +1,9 @@
-<!--<nav>-->
-<!--&lt;!&ndash;  <a routerLink="/">Cal</a>&ndash;&gt;-->
-<!--  <a [ routerLink ]="['/cal2']">Cal2</a>-->
-<!--</nav>-->
+<nav>
+  <a routerLink="/hi" routerLinkActive="selected"
+[routerLinkActiveOptions]="{exact:true}">100d</a><br>
+  <a routerLink="/cal">Calculator</a><br>
+  <a [routerLink]="['/cal2']" routerLinkActive="selected">Calculator2</a><br>
 
-<app-hi></app-hi>
+</nav>
+<router-outlet></router-outlet>
 
-<app-cal></app-cal>
-<!--<router-outlet></router-outlet>-->
