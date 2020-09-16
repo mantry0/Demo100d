@@ -1,4 +1,3 @@
-<router-outlet></router-outlet>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div *ngIf="user.age >= 18; else noPG13">
 
@@ -22,35 +21,35 @@
   </div>
 </ng-template>
 <div class="card">
-<button class="cll" (click)="user.age=user.age -1">-</button>
-<button class="cll" (click)="user.age=user.age +1">+</button>
+  <button class="cll" (click)="user.age=user.age -1">-</button>
+  <button class="cll" (click)="user.age=user.age +1">+</button>
 </div>
 <br><br>
 
 <table class="table">
   <thead class="thead-dark">
-    <tr>
-      <th scope="col">STT</th>
-      <th scope="col">Đầu</th>
-      <th scope="col">Cuối</th>
-      <th scope="col">Chẵn</th>
-      <th scope="col">Lẻ</th>
-      <th scope="col">Họ tên</th>
-      <th scope="col">Username</th>
-    </tr>
+  <tr>
+    <th scope="col">STT</th>
+    <th scope="col">Đầu</th>
+    <th scope="col">Cuối</th>
+    <th scope="col">Chẵn</th>
+    <th scope="col">Lẻ</th>
+    <th scope="col">Họ tên</th>
+    <th scope="col">Username</th>
+  </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let users of users; index as idx; count as total;first as first;last as last;even as even;odd as odd">
+  <tr *ngFor="let users of users; index as idx; count as total;first as first;last as last;even as even;odd as odd">
 
-      <th scope="row">{{idx}}/{{total}}</th>
-      <td>{{first}}</td>
-      <td>{{last}}</td>
-      <td>{{even}}</td>
-      <td>{{odd}}</td>
-      <td>{{users.name}}</td>
-      <td>{{users.username}}</td>
+    <th scope="row">{{idx}}/{{total}}</th>
+    <td>{{first}}</td>
+    <td>{{last}}</td>
+    <td>{{even}}</td>
+    <td>{{odd}}</td>
+    <td>{{users.name}}</td>
+    <td>{{users.username}}</td>
 
-    </tr>
+  </tr>
 
   </tbody>
 </table>
@@ -58,9 +57,10 @@
 <!-- <div [class.tab-active]="isTabActive">
   some content
 </div> -->
-<button {click}="isDanger = !isDanger">Toggle Danger</button><br><br>
-<button {click}="isWarning = !isWarning">Toggle Warning</button>
+<button (click)="isDanger = !isDanger">Toggle Danger</button><br><br>
+<button (click)="isWarning = !isWarning">Toggle Warning</button>
 
 <div class="box" [class.red-border]="isDanger" [class.yellow-bg]="isWarning"></div>
 
 <div class="box red-border yellow-bg"></div>
+<div [class]="classes"></div>

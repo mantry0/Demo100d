@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-hi',
   templateUrl: './hi.component.html',
-  styleUrls: ['./hi.component.css']
+  styleUrls: ['./hi.component.css'],
 })
 export class HiComponent implements OnInit {
 
@@ -248,6 +248,7 @@ export class HiComponent implements OnInit {
     ];
   isDanger = false;
   isWarning = false;
+  classes = 'box red-border yellow-bg';
 
   ngOnInit(): void {
   }

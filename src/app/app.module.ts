@@ -32,7 +32,7 @@ const routes: Routes = [
     HiComponent,
     CalComponent,
     Cal2Component,
-    ProgressBarComponent
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +42,6 @@ const routes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [RouterModule],
+  // exports: [RouterModule],
 })
 export class AppModule { }
