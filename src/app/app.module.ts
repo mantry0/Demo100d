@@ -17,6 +17,10 @@ const routes: Routes = [
     component: HiComponent
   },
   {
+    path: 'toggle',
+    component: ToggleComponent
+  },
+  {
   path: 'cal',
   component: CalComponent
   },

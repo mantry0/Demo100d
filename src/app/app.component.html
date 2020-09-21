@@ -6,6 +6,7 @@
   <a routerLink="/cal">Calculator</a><br>
   <a routerLink="/progress-bar">Progress bar</a><br>
   <a [routerLink]="['/cal2']" routerLinkActive="selected">Calculator2</a><br>
+  <a routerLink="/toggle">Toggle</a><br>
 </nav>
 <router-outlet></router-outlet>
 <!--day 7-->
@@ -26,5 +27,5 @@
 </p>
 
 <input type="text" [(ngModel)]="name">
-
-<app-toggle [(checked)]="checked"></app-toggle>
+<br>
+<app-toggle></app-toggle>
