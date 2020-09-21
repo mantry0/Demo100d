@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--day 4-->
 <div *ngIf="user.age >= 18; else noPG13">
-
-
+<!--day 3-->
   <div class="card">
     <app-hello></app-hello>
     <!-- <img src="img.jpg" alt="John" style="width:100%"> -->
@@ -14,7 +14,9 @@
     <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
     <p><button class="cl" (click)="showInfo()">Click me!</button></p>
   </div>
+<!--  end day 3-->
 </div>
+
 <ng-template #noPG13>
   <div class="card">
     <h1>Bạn không thể xem nội dung này!!!</h1>
@@ -25,7 +27,8 @@
   <button class="cll" (click)="user.age=user.age +1">+</button>
 </div>
 <br><br>
-
+<!--end day 4-->
+<!--day 5-->
 <table class="table">
   <thead class="thead-dark">
   <tr>
@@ -54,13 +57,17 @@
   </tbody>
 </table>
 <br><br>
-<!-- <div [class.tab-active]="isTabActive">
-  some content
-</div> -->
+<!--end day 5-->
+
+<!--day6-->
 <button (click)="isDanger = !isDanger">Toggle Danger</button><br><br>
 <button (click)="isWarning = !isWarning">Toggle Warning</button>
 
 <div class="box" [class.red-border]="isDanger" [class.yellow-bg]="isWarning"></div>
+<!--<div class="box red-border yellow-bg"></div>-->
+<!--<div [class]="classes"></div>-->
+<p [style.--text-color]="isDanger ? 'red' : 'blue'" [style]="{color: 'var(--text-color)', backgroundColor:'yellow', fontSize:'2rem'}">
+  Hello!!!
+</p>
+<!--end day 6-->
 
-<div class="box red-border yellow-bg"></div>
-<div [class]="classes"></div>

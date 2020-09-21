@@ -9,6 +9,7 @@ import { Cal2Component } from './cal2/cal2.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { Routes, RouterModule } from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import { ToggleComponent } from './toggle/toggle.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
     path: 'cal2',
     component: Cal2Component
   },
+  {
+    path: 'progress-bar',
+    component: ProgressBarComponent
+  },
 ];
 
 @NgModule({
@@ -33,6 +38,7 @@ const routes: Routes = [
     CalComponent,
     Cal2Component,
     ProgressBarComponent,
+    ToggleComponent,
   ],
   imports: [
     BrowserModule,

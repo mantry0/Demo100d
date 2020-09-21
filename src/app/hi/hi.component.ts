@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hi.component.css'],
 })
 export class HiComponent implements OnInit {
-
   constructor() { }
 
     // tslint:disable-next-line: member-ordering
@@ -14,7 +13,8 @@ export class HiComponent implements OnInit {
       name: 'Hai Dao',
       age: 20,
     };
-    users = [
+  // day 4 + 5
+  users = [
       {
         id: 1,
         name: 'Leanne Graham',
@@ -246,10 +246,12 @@ export class HiComponent implements OnInit {
         }
       }
     ];
+  // end day 4 + 5
+  // day 6
   isDanger = false;
   isWarning = false;
   classes = 'box red-border yellow-bg';
-
+  // end day 6
   ngOnInit(): void {
   }
     // tslint:disable-next-line: typedef

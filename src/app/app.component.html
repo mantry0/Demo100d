@@ -1,7 +1,30 @@
+
 <nav>
+  <a routerLink="/">Home</a><br>
   <a routerLink="/hi" routerLinkActive="selected"
 [routerLinkActiveOptions]="{exact:true}">100d</a><br>
   <a routerLink="/cal">Calculator</a><br>
+  <a routerLink="/progress-bar">Progress bar</a><br>
   <a [routerLink]="['/cal2']" routerLinkActive="selected">Calculator2</a><br>
 </nav>
 <router-outlet></router-outlet>
+<!--day 7-->
+
+<app-progress-bar></app-progress-bar>
+<app-progress-bar
+  [progress]="currenProgress" progressColor="dodgerblue"
+>
+</app-progress-bar>
+<br>
+<div class="card">
+<button class="cll" (click)="currenProgress = currenProgress -10">-</button>
+<button class="cll" (click)="currenProgress = currenProgress +10">+</button>
+</div>
+<!--end day 7-->
+<p>
+  Your name: {{ name }}
+</p>
+
+<input type="text" [(ngModel)]="name">
+
+
